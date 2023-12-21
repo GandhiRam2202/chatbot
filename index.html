@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bujjii Chatbot</title>
+    <link rel="stylesheet" href="chat.css">
+        
+</head>
+
+<body>
+    <div id="chat-container">
+        <h1 class="buji">Bujjii</h1>
+        <div id="chat"></div>
+        <div id="user-input-container">
+            <input type="text" id="user-input" placeholder="Message to Bujjii" onkeydown="handleKeyPress(event)">
+            <button id="send-btn" onclick="sendMessage()">✔️</button>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+    <script src="respondToMessage.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+#chat-container {
+    max-width: 1500px;
+    margin: 0px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+#chat {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+#user-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+#send-btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 70%;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.user-message {
+    margin-left: 800px;
+    border-radius: 35px;
+    background-color: #4CAF50;
+    color: white;
+    align-self: flex-end;
+}
+
+.bujjii-message {
+    color: white;
+    border-radius: 25px;
+    background-color: #375837;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 20%; }
+}
+
+.bujjii-message {
+    color: white;
+    border-radius: 25px;
+    background-color: #375837;
+    overflow: hidden;
+    position: relative;
+}
+
+.bujjii-message::before {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+    animation: typing 2s steps(20) alternate-reverse;
+}
+
+.buji {
+        text-align: center;
+        display: flex;
+        background-image: url(images/1.png);
+        height: 50px;
+        padding-top: 10px;
+        margin: 0;
+}
+img{
+    width: 160px; height: 200px
+}
+
+/* Media Query for 600px screen width */
+@media (max-width: 600px) {
+    #chat-container {
+        height: 90vh;
+        width: 56vh;
+        margin: none;
+        padding: none;
+
+    }
+    .buji{
+        text-align: center;
+        display: flex;
+        background-image: url(images/1.png);
+        height: 50px;
+        padding-left: 39%;
+        padding-top: 10px;
+        margin: 0;
+    }
+    .user-message {
+        margin-left: 90px;
+        border-radius: 35px;
+        background-color: #4CAF50;
+        color: white;
+        align-self: flex-end;
+    }
+    #chat {
+        flex: 1;
+        height: 100%;
+        width: 50vh;
+        padding: 10px;
+        overflow-y: scroll;
+    }
+    
+}
